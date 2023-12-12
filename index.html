@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image" href="img/bubble.png" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="rulesContainer">
+        <h1>Bubble Game</h1>
+        <button class="btns" onclick="playGame()">Play</button>
+        <button class="btns" onclick="howToPlay()">How to Play</button>
+      </div>
+      <div class="howToPlay">
+        <ul>
+          <li>There is a "Timer" of 1 minute to play this game.</li>
+          <li>
+            And there is "HIT" number, you have to hit the bubbles with same hit
+            number.
+          </li>
+          <li>
+            Once you hit the buble with same as hit number, you will get 10
+            points every time you hit the correct bubble.
+          </li>
+          <li>
+            But the twist is, when you hit the bubble, every time all the
+            bubbles get changed.
+          </li>
+        </ul>
+
+        <button id="backbtn" onclick="goBack()">Back</button>
+      </div>
+      <div id="container" style="display: none">
+        <div id="ctop">
+          <div class="elem">
+            <h3>Hit</h3>
+            <div id="hitval" class="box">1</div>
+          </div>
+          <div class="elem">
+            <h3>Timer</h3>
+            <div id="timerval" class="box">60</div>
+          </div>
+          <div class="elem">
+            <h3>Score</h3>
+            <div id="scoreval" class="box">00</div>
+          </div>
+        </div>
+        <div id="cbottom"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

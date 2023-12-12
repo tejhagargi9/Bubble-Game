@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(146, 172, 146);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rulesContainer h1 {
+    text-align: center;
+    margin-top: 10rem;
+    font-size: 5vw;
+}
+
+.rulesContainer button {
+    padding: .6rem 2rem;
+    position: relative;
+    display: block;
+    border: none;
+    right: -46%;
+    border-radius: 20px;
+    background-color: rgb(2, 29, 29);
+    font-size: 1.3vw;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: .3s;
+}
+
+.howToPlay {
+    display: none;
+}
+
+.howToPlay ul {
+    display: block;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.howToPlay ul li {
+    font-size: 1.5vw;
+    margin-top: 1rem;
+}
+
+.rulesContainer button:hover {
+    background-color: rgb(5, 56, 56);
+}
+
+.rulesContainer :nth-child(3) {
+    margin-top: 2rem;
+    right: -44%;
+}
+
+.rulesContainer :nth-child(2) {
+    margin-top: 2rem;
+}
+
+#backbtn {
+    padding: .6rem 2rem;
+    position: relative;
+    /* display: block; */
+    margin-top: 2rem;
+    border: none;
+    right: -46%;
+    border-radius: 20px;
+    background-color: rgb(2, 29, 29);
+    font-size: 1.3vw;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    /* transition: .3s; */
+}
+
+
+#container {
+    width: 80%;
+    height: 90vh;
+    background-color: white;
+    border-radius: 20px;
+    display: none;
+}
+
+#ctop {
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(70, 146, 70);
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5vw;
+}
+
+.box {
+    width: 4vw;
+    height: 4vh;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: rgb(70, 136, 70);
+
+}
+
+#cbottom {
+    width: 100%;
+    height: calc(90vh - 8vh);
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#cbottom .bubble {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2vw;
+    background-color: rgb(52, 104, 52);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all ease .3s;
+    white-space: none;
+
+}
+
+#cbottom .bubble:hover {
+    background-color: rgb(41, 70, 41);
+}
+
+/* 
+@media only screen and (min-width: 360px) and (max-width: 927px) {
+    .box {
+        width: 10vw;
+        height: 4vh;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        font-weight: 800;
+        color: rgb(70, 136, 70);
+        margin-left: 5px;
+    
+    }
+    .elem {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1vw;
+    }
+    #cbottom .bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 3.5vw;
+        background-color: rgb(52, 104, 52);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: all ease .3s;
+        white-space: none;
+    
+    }
+
+    #cbottom {
+        width: 100%;
+        height: calc(90vh - 8vh);
+        border-radius: 0px 0px 20px 20px;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        gap: 14px;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    
+} */
+
+@media only screen and (min-width: 360px) and (max-width: 800px) {
+    .box {
+        width: 10vw;
+        height: 4vh;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        font-weight: 800;
+        color: rgb(70, 136, 70);
+        margin-left: 5px;
+
+    }
+
+    .rulesContainer h1 {
+        text-align: center;
+        margin-top: 10rem;
+        font-size: 10vw;
+    }
+
+    .rulesContainer button {
+        padding: .6rem 2rem;
+        position: relative;
+        display: block;
+        border: none;
+        right: -38%;
+        border-radius: 20px;
+        background-color: rgb(2, 29, 29);
+        font-size: 3.2vw;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        transition: .3s;
+    }
+
+    .rulesContainer :nth-child(3) {
+        margin-top: 2rem;
+        right: -33%;
+    }
+
+    .rulesContainer :nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .howToPlay ul {
+        display: block;
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    .howToPlay ul li {
+        font-size: 3vw;
+        margin-top: 1rem;
+    }
+
+    #backbtn {
+        padding: .6rem 2rem;
+        position: relative;
+        /* display: block; */
+        margin-top: 2rem;
+        border: none;
+        right: -40%;
+        border-radius: 20px;
+        background-color: rgb(2, 29, 29);
+        font-size: 3vw;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        /* transition: .3s; */
+    }
+
+    .elem {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1vw;
+    }
+
+    #cbottom .bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 3.5vw;
+        background-color: rgb(52, 104, 52);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: all ease .3s;
+        white-space: none;
+        /* overflow: ; */
+
+    }
+
+    h3 {
+        font-size: medium;
+    }
+
+    #cbottom {
+        width: 100%;
+        height: calc(90vh - 8vh);
+        border-radius: 0px 0px 20px 20px;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        gap: 12.8px;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+    }
+
+}
+@media only screen and (min-width: 360px) and (max-width: 668px) {
+    .box {
+        width: 10vw;
+        height: 4vh;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        font-weight: 800;
+        color: rgb(70, 136, 70);
+        margin-left: 5px;
+
+    }
+    #container {
+        width: 80%;
+        height: 84vh;
+        background-color: white;
+        border-radius: 20px;
+        display: none;
+        overflow:hidden ;
+    }
+
+    .rulesContainer h1 {
+        text-align: center;
+        margin-top: 10rem;
+        font-size: 10vw;
+    }
+
+    .rulesContainer button {
+        padding: .6rem 2rem;
+        position: relative;
+        display: block;
+        border: none;
+        right: -38%;
+        border-radius: 20px;
+        background-color: rgb(2, 29, 29);
+        font-size: 3.2vw;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        transition: .3s;
+    }
+
+    .rulesContainer :nth-child(3) {
+        margin-top: 2rem;
+        right: -33%;
+    }
+
+    .rulesContainer :nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .howToPlay ul {
+        display: block;
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    .howToPlay ul li {
+        font-size: 3vw;
+        margin-top: 1rem;
+    }
+
+    #backbtn {
+        padding: .6rem 2rem;
+        position: relative;
+        /* display: block; */
+        margin-top: 2rem;
+        border: none;
+        right: -40%;
+        border-radius: 20px;
+        background-color: rgb(2, 29, 29);
+        font-size: 3vw;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        /* transition: .3s; */
+    }
+
+    .elem {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1vw;
+    }
+
+    #cbottom .bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 3.5vw;
+        background-color: rgb(52, 104, 52);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: all ease .3s;
+        white-space: none;
+        /* overflow: ; */
+
+    }
+    
+
+    h3 {
+        font-size: medium;
+    }
+
+    #cbottom {
+        width: 100%;
+        height: calc(90vh - 5vh);
+        border-radius: 0px 0px 20px 20px;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        gap: 12.8px;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+    }
+
+}
+
+@media only screen and (min-width: 390px) and (max-width: 844px) {
+    .box {
+        width: 10vw;
+        height: 4vh;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        font-weight: 800;
+        color: rgb(70, 136, 70);
+        margin-left: 5px;
+
+    }
+
+    h3 {
+        font-size: medium;
+    }
+
+    #cbottom .bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 3.5vw;
+        background-color: rgb(52, 104, 52);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: all ease .3s;
+        white-space: none;
+
+    }
+
+    #cbottom {
+        width: 100%;
+        height: calc(90vh - 9.5vh);
+        border-radius: 0px 0px 20px 20px;
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        gap: 14px;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    #container {
+        width: 80%;
+        height: 88.5vh;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+}
